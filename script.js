@@ -17,7 +17,9 @@ const images = [
     "https://cloud-d3z3pxxay-hack-club-bot.vercel.app/0img_7896.jpg",
     "https://cloud-eg8zh3ear-hack-club-bot.vercel.app/0img_7897.jpg",
     "https://cloud-e4je0to4j-hack-club-bot.vercel.app/0img_7899.jpg",
-    "https://cloud-4eufccfms-hack-club-bot.vercel.app/0img_7901.png"
+    "https://cloud-4eufccfms-hack-club-bot.vercel.app/0img_7901.png",
+    "https://cloud-kdhd5h4as-hack-club-bot.vercel.app/0img_7898.jpg",
+    "https://cloud-2ueimiqpg-hack-club-bot.vercel.app/0img_7900.jpg"
 ];
 
 const backgroundMusic = document.getElementById('bg-music');
