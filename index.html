@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="casino-container">
+        <h1 class="jackpot-display">Slot Machine</h1>
+        <div class="slot-machine">
+            <div class="reels">
+                <div class="reel">
+                    <img id="slot1" src="https://via.placeholder.com/100" alt="Slot 1">
+                </div>
+                <div class="reel">
+                    <img id="slot2" src="https://via.placeholder.com/100" alt="Slot 2">
+                </div>
+                <div class="reel">
+                    <img id="slot3" src="https://via.placeholder.com/100" alt="Slot 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" id="minorCheckbox" onchange="checkMinorStatus()">
+                Check here if you are a minor
+            </label>
+        </div>
+        <div class="minor-warning" id="minorWarning" style="display: none;">
+            ✅ Gambling is allowed for minors!
+        </div>
+
+        <button class="spin-button" onclick="spin()">Spin</button>
+        <div class="result" id="result"></div>
+
+        <!-- Full-screen popup -->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <h1>ONLY MINORS CAN GAMBLE ON THIS WEBSITE! 🚨</h1>
+                <button class="close-popup" onclick="closePopup()">Close</button>
+            </div>
+        </div>
+        <audio id="angryNoise" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+    </div>
+
+    <script>
+        // Array of image URLs
+        const images = [
+            "https://cloud-h7scu58vo-hack-club-bot.vercel.app/0img_7894.jpg",
+            "https://cloud-klyi66udw-hack-club-bot.vercel.app/0img_7895.jpg",
+            "https://cloud-d3z3pxxay-hack-club-bot.vercel.app/0img_7896.jpg",
+            "https://cloud-eg8zh3ear-hack-club-bot.vercel.app/0img_7897.jpg",
+            "https://cloud-e4je0to4j-hack-club-bot.vercel.app/0img_7899.jpg",
+            "https://cloud-4eufccfms-hack-club-bot.vercel.app/0img_7901.png"
+        ];
+
+        function spin() {
+            const isMinor = document.getElementById('minorCheckbox').checked;
+
+            // Check if the person is not a minor
+            if (!isMinor) {
+                showPopup();
+                return;
+            }
+
+            // Get random images for each slot
+            const slot1 = images[Math.floor(Math.random() * images.length)];
+            const slot2 = images[Math.floor(Math.random() * images.length)];
+            const slot3 = images[Math.floor(Math.random() * images.length)];
+
+            // Display the images
+            document.getElementById('slot1').src = slot1;
+            document.getElementById('slot2').src = slot2;
+            document.getElementById('slot3').src = slot3;
+
+            // Check the result
+            const resultElement = document.getElementById('result');
+            if (slot1 === slot2 && slot2 === slot3) {
+                resultElement.textContent = "🎉 Jackpot! You win! 🎉";
+                resultElement.style.color = "#FFD700";
+            } else if (slot1 === slot2 || slot2 === slot3 || slot1 === slot3) {
+                resultElement.textContent = "✨ Close! Two matched! ✨";
+                resultElement.style.color = "#ADD8E6";
+            } else {
+                resultElement.textContent = "💔 Try Again!";
+                resultElement.style.color = "white";
+            }
+        }
+
+        function checkMinorStatus() {
+            const isMinor = document.getElementById('minorCheckbox').checked;
+            const warning = document.getElementById('minorWarning');
+
+            if (isMinor) {
+                warning.style.display = "block";
+            } else {
+                warning.style.display = "none";
+            }
+        }
+
+        function showPopup() {
+            const popup = document.getElementById('popup');
+            const angryNoise = document.getElementById('angryNoise');
+            popup.style.display = 'flex';
+            angryNoise.play();
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
