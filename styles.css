@@ -173,3 +173,25 @@ body {
     text-shadow: 0 0 5px rgba(255, 31, 143, 0.5);
     z-index: 1000;
 }
+
+#toggle-music {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: bold;
+    background: var(--neon-blue);
+    color: white;
+    border: 2px solid var(--neon-pink);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    z-index: 1000;
+}
+
+#toggle-music:hover {
+    background: var(--neon-pink);
+    color: black;
+    box-shadow: 0 0 15px rgba(255, 31, 143, 0.7);
+}

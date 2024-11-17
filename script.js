@@ -1,20 +1,16 @@
-// Initialize the player's money and play count
 let money = 10000;
 let playCount = 0;
 const maxPlays = 10;
 
-// Display the initial money amount
 document.addEventListener('DOMContentLoaded', () => {
     updateMoneyDisplay();
 });
 
-// Function to update the money display
 function updateMoneyDisplay() {
     const moneyDisplay = document.getElementById('money-display');
     moneyDisplay.textContent = `$${money.toLocaleString()}`;
 }
 
-// Images for the slot machine
 const images = [
     "https://cloud-h7scu58vo-hack-club-bot.vercel.app/0img_7894.jpg",
     "https://cloud-klyi66udw-hack-club-bot.vercel.app/0img_7895.jpg",
@@ -23,6 +19,20 @@ const images = [
     "https://cloud-e4je0to4j-hack-club-bot.vercel.app/0img_7899.jpg",
     "https://cloud-4eufccfms-hack-club-bot.vercel.app/0img_7901.png"
 ];
+
+const backgroundMusic = document.getElementById('bg-music');
+let musicPlaying = false;
+
+document.getElementById('toggle-music').addEventListener('click', () => {
+    if (musicPlaying) {
+        backgroundMusic.pause();
+        document.getElementById('toggle-music').textContent = 'Turn Music On';
+    } else {
+        backgroundMusic.play();
+        document.getElementById('toggle-music').textContent = 'Turn Music Off';
+    }
+    musicPlaying = !musicPlaying;
+});
 
 function spin() {
     const isMinor = document.getElementById('minorCheckbox').checked;
@@ -38,7 +48,6 @@ function spin() {
         return;
     }
 
-    // Deduct money and increment play count
     money -= betAmount;
     playCount++;
     updateMoneyDisplay();
@@ -59,42 +68,38 @@ function spin() {
         const winAmount = betAmount * 10;
         money += winAmount;
         updateMoneyDisplay();
-        showResultMessage(`🎉 Jackpot! You win $${winAmount.toLocaleString()}! 🎉`, "cheers.mp3", true);
+        showResultMessage(`🎉 Jackpot! You win $${winAmount.toLocaleString()}! 🎉`, "cheer.mp3", true);
     } else if (slot1Index === slot2Index || slot2Index === slot3Index || slot1Index === slot3Index) {
         const winAmount = betAmount * 2;
         money += winAmount;
         updateMoneyDisplay();
-        showResultMessage(`✨ Matched two symbols! You win $${winAmount.toLocaleString()}! ✨`, "cheers.mp3", true);
+        showResultMessage(`✨ Matched two symbols! You win $${winAmount.toLocaleString()}! ✨`, "cheer.mp3", true);
     } else {
         showResultMessage("💔 You lost this round!", "unhappy.mp3", false);
     }
 
     if (playCount === maxPlays) {
         setTimeout(() => {
-            const netEarnings = money - 10000; // Compare to starting money
+            const netEarnings = money - 10000; 
             const summaryMessage = netEarnings >= 0
                 ? `🎉 After ${maxPlays} plays, you earned $${netEarnings.toLocaleString()}!`
                 : `💔 After ${maxPlays} plays, you lost $${Math.abs(netEarnings).toLocaleString()}!`;
-            showResultMessage(summaryMessage, "cheers.mp3", netEarnings >= 0);
+            showResultMessage(summaryMessage, "cheer.mp3", netEarnings >= 0);
         }, 2000);
     }
 }
 
-// Function to show result messages in larger text
 function showResultMessage(message, soundFile, confetti) {
     const resultElement = document.getElementById('result');
     const soundEffect = new Audio(soundFile);
 
-    // Clear previous result
     resultElement.textContent = '';
-    resultElement.style.fontSize = '2em'; // Larger text for emphasis
+    resultElement.style.fontSize = '2em'; 
     resultElement.style.textAlign = 'center';
     resultElement.textContent = message;
 
-    // Play sound
     soundEffect.play();
 
-    // Trigger confetti if enabled
     if (confetti) {
         launchConfetti();
     }
@@ -117,7 +122,6 @@ function closePopup() {
     document.body.style.overflow = '';
 }
 
-// Function to launch confetti effects
 function launchConfetti() {
     const confettiCanvas = document.createElement('canvas');
     confettiCanvas.id = 'confettiCanvas';
@@ -136,5 +140,5 @@ function launchConfetti() {
         origin: { y: 0.6 },
     });
 
-    setTimeout(() => document.body.removeChild(confettiCanvas), 3000); // Remove confetti after 3 seconds
+    setTimeout(() => document.body.removeChild(confettiCanvas), 3000); 
 }
