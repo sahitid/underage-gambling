@@ -1,12 +1,17 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slot Machine</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
+    <!-- Money Display -->
+    <div id="money-display">$10,000</div>
+
+    <!-- Lever Container -->
     <div class="lever-container">
         <div class="lever-base" id="lever" onclick="spin()">
             <div class="lever-handle"></div>
@@ -14,7 +19,7 @@
     </div>
 
     <div class="casino-container">
-        <h1 class="jackpot-display">Underaged Gambling (Endorsed by Zach Latta)</h1>
+        <h1 class="jackpot-display">Underaged Slot Machine Gambling</h1>
         <div class="slot-machine">
             <div class="reels">
                 <div class="reel">
@@ -38,6 +43,7 @@
 
         <div class="result" id="result"></div>
 
+        <!-- Popup -->
         <div class="popup" id="popup">
             <div class="popup-content">
                 <h1>ONLY MINORS CAN GAMBLE ON THIS WEBSITE! 🚨</h1>
@@ -49,4 +55,9 @@
 
     <script src="script.js"></script>
 </body>
+
+<footer id="endorsement-footer">
+    Endorsed by Zachary Robert Latta the First: "I endorse minors gambling away their money."
+</footer>
+
 </html>
