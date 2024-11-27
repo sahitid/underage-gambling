@@ -1,14 +1,12 @@
 # **Underage Slot Machines Simulator** 🎰👶  
 *Teaching kids the joys of financial ruin before they're even old enough to vote!*  
 
----
 
 ## **About**  
 Welcome to **Underage Slot Machines Simulator**—the only slot machine designed to crush kids’ dreams and allowances while imparting life lessons about the horrors of gambling. Through *rigged outcomes* and *sketchy user interfaces,* this app ensures that young players quickly learn: **“99% OF GAMBLERS QUIT RIGHT BEFORE THEY WIN BIG!!.”**
 
 ![Underage Gambling Simulator](https://cloud-citg1k35e-hack-club-bot.vercel.app/0image.png)
 
----
 
 ## **Features**  
 
@@ -25,13 +23,11 @@ Welcome to **Underage Slot Machines Simulator**—the only slot machine designed
 - 🎉 Confetti Explosions
 Every “win” triggers an unholy cascade of confetti & flashy animations. Perfect for a temporary dopamine rush that hooks players and leaves them spinning again… and again.
 
----
 
 ## **Try It Now**  
 Ready to experience the rollercoaster of despair? Test it out at:  
 👉 **[https://underage-gambling.vercel.app/](https://underage-gambling.vercel.app/)**  
 
----
 
 ## **Getting Started**  
 
@@ -54,17 +50,13 @@ Ready to experience the rollercoaster of despair? Test it out at:
 4. **Cry**  
    Load the app in your browser, start spinning, and question your life choices.
 
----
-
 ## **Disclaimer**  
 This project is a **parody** and should not be taken seriously. Gambling is not a joke and can lead to addiction and financial ruin. The app is intended to highlight the dangers of gambling through humor and exaggerated scenarios. Please do not gamble—and teach others not to either!  
 
----
 
 ## **Contributing**  
 Want to make this app even more ridiculous? Open an issue or PR. We're always looking for ways to make losing fake money *even funnier.*  
 
----
 
 ## **License**  
 Released under the **"It’s Satire, Chill" License (ISCL)**. 
