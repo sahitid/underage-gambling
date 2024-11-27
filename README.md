@@ -3,7 +3,7 @@
 
 
 ## **About**  
-Welcome to **Underage Slot Machines Simulator**—the only slot machine designed to crush kids’ dreams and allowances while imparting life lessons about the horrors of gambling. Through *rigged outcomes* and *sketchy user interfaces,* this app ensures that young players quickly learn: **“99% OF GAMBLERS QUIT RIGHT BEFORE THEY WIN BIG!!.”**
+Welcome to **Underage Slot Machines Simulator**—the only slot machine designed to crush kids’ dreams and allowances while imparting life lessons about the horrors of gambling. Through *rigged outcomes* and *sketchy user interfaces,* this app ensures that young players quickly learn: **“99% OF GAMBLERS QUIT RIGHT BEFORE THEY WIN BIG!!”**
 
 ![Underage Gambling Simulator](https://cloud-citg1k35e-hack-club-bot.vercel.app/0image.png)
 
@@ -12,6 +12,7 @@ Welcome to **Underage Slot Machines Simulator**—the only slot machine designed
 
 - 🎨 **Sketchy UI**  
   Experience the thrill of weird colors, outdated buttons, and loading spinners that *never* stop spinning—just like a real back-alley casino. Includes a flashy button pop-up for adults who try to gamble on the website.
+  
 ![Only Minors Can Gamble Warning](https://cloud-m9pfr4ry9-hack-club-bot.vercel.app/0image.png)
 
 - 🎵 **Subtle Casino Music**  
